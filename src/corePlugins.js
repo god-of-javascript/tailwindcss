@@ -192,9 +192,7 @@ export let variantPlugins = {
 
           let pseudo = result.slice(start + 1, end)
 
-          pseudo = config('prefix')
-            ? `:tw-no-prefix(${pseudo})`
-            : pseudo
+          pseudo = config('prefix') ? `:tw-no-prefix(${pseudo})` : pseudo
 
           return result.slice(0, start) + a + pseudo + b + result.slice(end)
         },
